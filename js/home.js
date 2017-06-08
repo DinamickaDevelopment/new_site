@@ -28,8 +28,8 @@ $(document).ready(() => {
     });
 
     $('.scroll-down-btn').on('click', () => {
-        let host = window.location.protocol + window.location.hostname + '#2'; 
-        window.location.replace(host); 
+        // let host = window.location.protocol + window.location.hostname + '#2'; 
+        window.location.replace('#2'); 
     })
   
 })
