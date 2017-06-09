@@ -9,13 +9,19 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="js/lib/jquery.pagepiling.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="js/lib/jquery.pagepiling.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/lib/dragdealer.min.js"></script>
     <script src="https://use.fontawesome.com/2e27b6ddf4.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="js/lib/slick.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/slick-theme.css">
+    <script src="js/lib/slick.js" type="text/javascript" charset="utf-8"></script>
     <title>Home</title>
 </head>
 
@@ -78,7 +84,7 @@
                 </div>
                 <div class="what-we-do__tabs">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-left">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-left">
                             <div class="what-we-do__tabs_tab small-tab">
                                 <div class="tab-content">
                                     <div>
@@ -88,7 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-center">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-center">
                             <div class="what-we-do__tabs_tab small-tab">
                                 <div class="tab-content">
                                     <div>
@@ -98,7 +104,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-right">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-right">
                             <div class="what-we-do__tabs_tab small-tab">
                                 <div class="tab-content">
                                     <div>
@@ -110,7 +116,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-left">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-left">
                             <div class="what-we-do__tabs_tab small-tab">
                                 <div class="tab-content">
                                     <div>
@@ -120,7 +126,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-center">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-center">
                             <div class="what-we-do__tabs_tab small-tab">
                                 <div class="tab-content">
                                     <div>
@@ -130,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-right">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-right">
                             <div class="what-we-do__tabs_tab small-tab">
                                 <div class="tab-content">
                                     <div>
@@ -148,17 +154,17 @@
             <div class="homepage__section">
                 <div class="homepage__section-title">
                     <h2>OUR RECENT WORKS</h2>
-                    <hr /> 
-                </div>  
+                    <hr />
+                </div>
                 <div class="recent-works__filter">
-                    <span class="active">ALL</span> 
+                    <span class="active">ALL</span>
                     <span>WEB</span>
                     <span>MOBILE</span>
                     <span>UI/UX</span>
                 </div>
                 <div class="recent-works__tabs">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-left">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-left">
                             <div class="recent-works__tabs_tab small-tab">
                                 <div class="recent-works-placeholder recent-works-violet">
                                     <div class="recent-works__project-description top-offset">
@@ -170,13 +176,13 @@
                             <div class="recent-works__tabs_tab small-tab">
                                 <div class="recent-works-placeholder recent-works-gray">
                                     <div class="recent-works__project-description full-offset">
-                                         <p class="main">PROJECT TITLE</p>
+                                        <p class="main">PROJECT TITLE</p>
                                         <p class="small">WEB DEVELOPMENT</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-center">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-center">
                             <div class="recent-works__tabs_tab big-tab">
                                 <div class="recent-works-placeholder recent-works-gradient-green">
                                     <div class="recent-works__project-description full-offset">
@@ -186,7 +192,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tab-wrap-right">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-right">
                             <div class="recent-works__tabs_tab small-tab">
                                 <div class="recent-works-placeholder recent-works-gradient-violet">
                                     <div class="recent-works__project-description top-offset">
@@ -207,17 +213,91 @@
                 </div>
             </div>
         </div>
-        <div class="homepage__content_tab section">
-            <div class="homepage__section">
+        <div class="homepage__content_tab section slider-section">
+            <div class="homepage__section team-overlay">
                 <div class="homepage__section-title">
                     <h2>OUR TEAM</h2>
                     <hr />
                 </div>
+                <div class="team-slider__controls">
+                    <div class="team-slider__controls_wrap">
+                        <div class="slider-stats">1/6</div>
+                        <div class="slider-track dragdealer" id="team-slider-controls">
+                            <div class="handle slider-thumb"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="homepage__content_tab section clients-section slider-section">
+            <div class="homepage__section slider-overlay">
+                <div class="homepage__section-title">
+                    <h2>WHAT OUR CLIENTS SAY</h2>
+                    <hr />
+                </div>
         </div>
     </div>
     </div>
+    <div class="team-slider__content">
+        <div>
+            <div class="slide__content slide-tab">
+                <img src="img/he.png" class="slide__content_img img-responsive" />
+                <div class="slide__content_text">
+                    <p class="main">NAME LASTNAME</p>
+                    <p class="small">POSITION</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="slide__content slide-tab">
+                <img src="img/her.png" class="slide__content_img img-responsive" />
+                <div class="slide__content_text">
+                    <p class="main">NAME LASTNAME</p>
+                    <p class="small">POSITION</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="slide__content slide-tab">
+                <img src="img/he.png" class="slide__content_img img-responsive" />
+                <div class="slide__content_text">
+                    <p class="main">NAME LASTNAME</p>
+                    <p class="small">POSITION</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="slide__content slide-tab">
+                <img src="img/her.png" class="slide__content_img img-responsive" />
+                <div class="slide__content_text">
+                    <p class="main">NAME LASTNAME</p>
+                    <p class="small">POSITION</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="slide__content slide-tab">
+                <img src="img/he.png" class="slide__content_img img-responsive" />
+                <div class="slide__content_text">
+                    <p class="main">NAME LASTNAME</p>
+                    <p class="small">POSITION</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="slide__content slide-tab">
+                <img src="img/her.png" class="slide__content_img img-responsive" />
+                <div class="slide__content_text">
+                    <p class="main">NAME LASTNAME</p>
+                    <p class="small">POSITION</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="clients-slider">
+        <div class="clients-slider__content"></div>
+    </div>
 </body>
 
 </html>

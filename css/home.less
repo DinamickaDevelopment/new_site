@@ -4,10 +4,16 @@
 
 @dark: #2b2b2b; 
 
+html {
+    min-height: 650px;
+}
+
 body {
     margin: 0;
     padding: 0; 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    min-height: 650px;  
+    background: #f5f5f5; 
 }
 
 .homepage__sidebar { 
@@ -15,7 +21,8 @@ body {
     height: 100%;
     width: 250px;  
     z-index: 100; 
-    background: #fff;
+    background: #fff; 
+    min-height: 700px; 
 }
 
 .homepage__content {
@@ -24,7 +31,6 @@ body {
     width: 100%; 
     padding-left: 250px; 
     z-index: 10; 
-    background: #fafafa; 
 }
 
 .homepage__content_tab {
@@ -176,7 +182,7 @@ a:hover {
 } 
 
 .homepage__section-title {
-    margin-left: 220px; 
+    margin-left: 10%; 
 
     h2 {
         font-size: 36px; 
@@ -251,7 +257,7 @@ a:hover {
 .recent-works__filter {
     float: right; 
     font-size: 18px; 
-    margin-right: 220px; 
+    margin-right: 10%; 
     color: @dark; 
     margin-top: -33px; 
 
@@ -350,5 +356,204 @@ a:hover {
          justify-content: space-around; 
     width: 100%;
     height: 100%; 
+} 
+
+/* _________________ team _________________ */ 
+
+.team-slider__content {
+    width: 70%;
+    position: absolute!important;
+    overflow: hidden;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 160px;
+    padding-left: 225px; 
+    display: none;
+
 }
 
+.slider-track {
+    height: 2px;
+    background: #9855d4;
+    width: 225px; 
+    position: absolute; 
+    box-sizing: content-box; 
+}
+
+.slide-tab {
+    padding: 10px; 
+}
+
+.slider-thumb {
+    height: 7px;
+    margin-top: 0px;
+    background: #9855d4;
+    position: absolute;
+    margin-top: -2px; 
+    cursor: pointer; 
+}
+
+.slider-stats {
+    position: absolute;
+    margin-top: -25px;
+    right: 0;
+    font-weight: 600;
+}
+
+.team-slider__controls {
+    width: 260px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    margin-left: 20px;
+}
+
+.slide {
+    display: inline-block; 
+    padding: 10px; 
+    display: none;
+} 
+
+.active-slide {
+    display: inline-block; 
+} 
+
+.next-slide {
+    display: inline-block;
+    opacity: .5;
+}
+
+.slider-section {
+    background-color: transparent; 
+} 
+
+.slide__content_text { 
+    font-weight: 900; 
+    color: @dark; 
+
+    .main {
+        font-size: 23px;  
+        margin-top: 20px;
+        margin-bottom: 0;
+    } 
+    .small {
+        font-size: 18px; 
+    }
+}
+
+.team-slider__content {
+    display: none; 
+}
+
+.slider-overlay {
+    display: none; 
+} 
+
+.team-overlay {
+    display: none;
+}
+
+.slick-slide {
+    overflow: visible; 
+}
+
+.slick-current + .slick-active {
+    opacity: .5; 
+}
+
+@media screen and (max-width: 1550px) {
+    .team-slider__content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .team-slider__content {
+        width: 90%;
+        position: absolute!important;
+        overflow: hidden;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 140px;
+        padding-left: 225px; 
+
+    } 
+
+    .team-slider__controls {
+        left: 25px;
+        bottom: 15%; 
+    }
+
+    
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .homepage__section-title {
+        h2 {
+            font-size: 30px; 
+        }
+    }
+
+    .recent-works__filter {
+        float: right;
+        font-size: 16px;
+        margin-right: 10%;
+        color: #2b2b2b;
+        margin-top: -29px;
+    }
+
+    .home-intro__container_title h1 {
+        font-size: 55px; 
+    } 
+    .home-intro__container_title h3 {
+        font-size: 30px; 
+    }
+    .recent-works-placeholder {
+         .top-offset {
+            left: 30px; 
+         }
+
+         .full-offset {
+            left: 30px; 
+         }  
+    }
+
+    .recent-works__filter {
+        margin-top: 40px; 
+    } 
+
+} 
+
+@media screen and (max-width: 1000px) {
+    .recent-works__project-description {
+        .main {
+            font-size: 18px; 
+        }
+
+        .small {
+            font-size: 14px; 
+        }
+    }
+
+    .recent-works__all-projects-btn {
+        font-size: 18px;     
+    } 
+
+    .what-we-do-text {
+        font-size: 18px;    
+    }
+
+
+
+}
+
+@media screen and (max-height: 800px) {
+
+    .team-slider__controls {
+        bottom: 7%; 
+    }   
+}
