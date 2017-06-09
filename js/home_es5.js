@@ -109,11 +109,11 @@ $(document).ready(function () {
 
     });
 
-    var hash = window.location.hash;
-    hash = hash.replace('#', '');
-    if (hash != '') {
-        $.fn.pagepiling.moveTo(hash);
-    }
+    // var hash = window.location.hash;
+    // hash = hash.replace('#', '');
+    // if (hash != '') {
+    //     $.fn.pagepiling.moveTo(hash);
+    // }
 
     // team slider
     var slider = new Slider(6, 'team-slider-controls');
