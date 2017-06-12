@@ -289,7 +289,6 @@ a:hover {
 .team-slider__container {
   padding-left: 15%;
   padding-right: 15%;
-  position: absolute;
 }
 .team-slider__content {
   width: 70%;
@@ -324,9 +323,10 @@ a:hover {
 .team-slider__controls {
   width: 260px;
   box-sizing: border-box;
-  margin-left: 10px;
   position: absolute;
-  bottom: -35%;
+  bottom: 15%;
+  left: 15%;
+  margin-left: 20px;
 }
 .slide {
   display: none;
@@ -360,11 +360,12 @@ a:hover {
   opacity: .5;
 }
 .slick-list {
-  padding: 0!important;
+  padding: 0;
 }
 @media screen and (max-width: 1350px) {
   .team-slider__controls {
-    bottom: -25%;
+    left: 25px;
+    bottom: 15%;
   }
   .team-slider__content {
     width: 80%;
@@ -413,5 +414,10 @@ a:hover {
   }
   .what-we-do-text {
     font-size: 18px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .team-slider__controls {
+    bottom: 7%;
   }
 }

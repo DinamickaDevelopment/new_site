@@ -360,16 +360,20 @@ a:hover {
 
 /* _________________ team _________________ */ 
 
+
+.team-slider__container {
+    padding-left: 15%; 
+    padding-right: 15%; 
+    position: absolute;
+
+} 
+
+
 .team-slider__content {
     width: 70%;
     position: absolute!important;
     overflow: hidden;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 160px;
-    padding-left: 225px; 
-    display: none;
-
+    margin-top: 75px;
 }
 
 .slider-track {
@@ -403,15 +407,12 @@ a:hover {
 .team-slider__controls {
     width: 260px;
     box-sizing: border-box;
+    margin-left: 10px;
     position: absolute;
-    bottom: 15%;
-    left: 15%;
-    margin-left: 20px;
+    bottom: -35%; 
 }
 
 .slide {
-    display: inline-block; 
-    padding: 10px; 
     display: none;
 } 
 
@@ -442,50 +443,32 @@ a:hover {
     }
 }
 
-.team-slider__content {
-    display: none; 
-}
-
-.slider-overlay {
-    display: none; 
-} 
-
-.team-overlay {
-    display: none;
-}
-
 .slick-slide {
     overflow: visible; 
 }
 
-.slick-current + .slick-active {
+.slick-active + .slick-current {
     opacity: .5; 
-}
+} 
 
-@media screen and (max-width: 1550px) {
-    .team-slider__content {
-        width: 80%;
-    }
+.slick-list {
+    padding: 0!important; 
 }
 
 @media screen and (max-width: 1350px) {
-    .team-slider__content {
-        width: 90%;
-        position: absolute!important;
-        overflow: hidden;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 140px;
-        padding-left: 225px; 
-
-    } 
-
     .team-slider__controls {
-        left: 25px;
-        bottom: 15%; 
+        bottom: -25%; 
     }
 
-    
+    .team-slider__content {
+        width: 80%;
+    }
+    .team-slider__container {
+        padding-left: 10%; 
+        padding-right: 10%; 
+    }
+
+
 
 }
 
@@ -551,9 +534,9 @@ a:hover {
 
 }
 
-@media screen and (max-height: 800px) {
+// @media screen and (max-height: 800px) {
 
-    .team-slider__controls {
-        bottom: 7%; 
-    }   
-}
+//     .team-slider__controls {
+//         bottom: 7%; 
+//     }   
+// }

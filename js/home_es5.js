@@ -38,7 +38,12 @@ $(document).ready(function () {
 
         $('.slider-track').css({
             paddingRight: $('.slider-thumb').width()
-        });
+        }); 
+
+        $('.team-slider__container').css({
+            width: (window.innerWidth - 225) + 'px', 
+            height: h / 2 + 'px'
+        })
     };
 
     resizeFunc();
@@ -51,24 +56,11 @@ $(document).ready(function () {
         slidesToShow: 2,
         autoplay: true,
         autoplaySpeed: 5000,
-        speed: 250
+        speed: 250, 
+        centerMode: true
     });
-    $('.team-slider__content').css({
-        opacity: '0!important'
-    }
 
-    // $('.clients-slider__content').slick({
-    //     slidesToScroll: 1,
-    //     slidesToShow: 2,
-    //     autoplay: true,
-    //     autoplaySpeed: 7000,
-    //     speed: 300
-    // })
-    // $('.team-slider__content').css({
-    //     opacity: '0!important'
-    // })
-
-    );$('.nav__main_home-options').find('li').on('click', function (e) {
+    $('.nav__main_home-options').find('li').on('click', function (e) {
         var t = $(this).attr('data-target'); 
         $.fn.pagepiling.moveTo(t);
     }
@@ -76,46 +68,7 @@ $(document).ready(function () {
     // page scroll 
     );$('#pagepiling').pagepiling({
         anchors: ['#1', '#2', '#3', '#4', '#5'],
-        navigation: false,
-        afterRender: function afterRender() {
-
-            // $('.team-slider__content').css({
-            //     display: 'block'
-            // })
-
-        },
-        afterLoad: function afterLoad(hash, i) {
-
-            if (i == 4) {
-
-                $('.team-overlay').fadeIn(300);
-                $('.team-slider__content').slick('slickGoTo', 0);
-                $('.team-slider__content').fadeIn(300).css({ opacity: '1!important' });
-            } else {
-                $('.team-overlay').fadeOut(300);
-                $('.team-slider__content').fadeOut();
-            }
-
-            if (i == 5) {
-                $('.clients-slider__content'
-                // .slick('slickGoTo', 0) 
-                ).fadeIn(300).css({ opacity: '1!important' });
-                $('.slider-overlay').fadeIn(300);
-            } else {
-                $('.slider-overlay').fadeOut(300);
-            }
-        },
-        onLeave: function onLeave(old, next, dir) {
-
-            if (old == 4) {
-                $('.team-slider__content').fadeOut(300);
-            }
-            $('.team-overlay').fadeOut(300);
-
-            if (old == 5) {
-                $('.slider-overlay').fadeOut(300);
-            }
-        }
+        navigation: false
 
     });
 
