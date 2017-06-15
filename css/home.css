@@ -4,6 +4,7 @@ html {
   min-height: 650px;
 }
 body {
+  display: none;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -326,7 +327,7 @@ a:hover {
   box-sizing: border-box;
   margin-left: 10px;
   position: absolute;
-  bottom: -35%;
+  bottom: -45%;
 }
 .slide {
   display: none;
@@ -362,9 +363,68 @@ a:hover {
 .slick-list {
   padding: 0!important;
 }
+/* __________________________________what clients say __________________________ */
+.clients-slider__navigation {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  z-index: 9999;
+  margin-top: -114px;
+  margin-left: 37%;
+}
+.clients-slider__navigation div {
+  display: inline-block;
+  padding: 10px;
+}
+.clients-slider__container {
+  margin: 75px auto 0 auto;
+}
+.slick-active:not(.slick-current) {
+  opacity: 1!important;
+}
+.slick-cloned {
+  opacity: .5;
+}
+.arrow {
+  color: #9b5ad5;
+  font-size: 25px;
+}
+.clients-slide {
+  padding: 30px;
+  background: #fff;
+  margin: 20px;
+  min-width: 400px;
+}
+.clients-slide__text {
+  padding-bottom: 30px;
+}
+.clients-slide__persona {
+  display: flex;
+  display: webkit-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.clients-slide__persona_info {
+  margin-left: 20px;
+}
+.clients-slide___name {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.clients-slide__persona_picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.clients-slide__persona_picture img {
+  margin-left: -27px;
+  margin-top: -1px;
+}
 @media screen and (max-width: 1350px) {
   .team-slider__controls {
-    bottom: -25%;
+    bottom: -50%;
   }
   .team-slider__content {
     width: 80%;
