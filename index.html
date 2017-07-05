@@ -20,7 +20,7 @@
     <script src="https://use.fontawesome.com/2e27b6ddf4.js"></script>
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
     <script src="js/home.js"></script>
- 
+
 
 
     <link rel="favicon" href="favicon.ico" type="image/x-icon" />
@@ -51,7 +51,7 @@
                                 <li data-target="4">OUR TEAM</li>
                                 <li data-target="5">WHAT OUR CLIENTS SAY</li>
                                 <li data-target="6">LATEST POSTS</li>
-                                <li>CONTACT US</li>
+                                <li data-target="7">CONTACT US</li>
                             </ul>
                         </li>
                         <li>OUR PROJECTS</li>
@@ -219,9 +219,9 @@
                 </div>
             </div>
         </div>
-        <div class="homepage__content_tab section">
+        <div class="homepage__content_tab section clients-section">
             <div class="homepage__section team-overlay">
-                <div class="homepage__section-title">
+                <div class="homepage__section-title" id="#team">
                     <h2>OUR TEAM</h2>
                     <hr />
                 </div>
@@ -293,253 +293,280 @@
                 </div>
 
             </div>
-        </div>
-        <div class="homepage__content_tab section clients-section slider-section">
-            <div class="homepage__content-scroller" id="scroller">
-                <div class="homepage__section slider-overlay">
-                    <div class="homepage__section-title">
-                        <h2>WHAT OUR CLIENTS SAY</h2>
-                        <hr />
-                    </div>
-                    <div class="clients-slider__container">
-                        <div class="clients-slider__content">
-                            <div class="clients-slide" id="slide">
-                                <div class="clients-slide__text">
-                                    <div class="client-slide__text_content">
-                                        “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in”
-                                    </div>
-                                </div>
-                                <div class="clients-slide__persona">
-                                    <div class="clients-slide__persona_picture">
-                                        <img src="img/client.png" alt="team member" />
-                                    </div>
-                                    <div class="clients-slide__persona_info">
-                                        <div class="clients-slide___name">NAME LASTNAME</div>
-                                        <div class="clients-slide__position">POSITION, COMPANY NAME</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clients-slide">
-                                <div class="clients-slide__text">
-                                    <div class="client-slide__text_content">
-                                        “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in”
-                                    </div>
-                                </div>
-                                <div class="clients-slide__persona">
-                                    <div class="clients-slide__persona_picture">
-                                        <img src="img/client.png" alt="team member" />
-                                    </div>
-                                    <div class="clients-slide__persona_info">
-                                        <div class="clients-slide___name">NAME LASTNAME</div>
-                                        <div class="clients-slide__position">POSITION, COMPANY NAME</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clients-slide">
-                                <div class="clients-slide__text">
-                                    <div class="client-slide__text_content">
-                                        “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in”
-                                    </div>
-                                </div>
-                                <div class="clients-slide__persona">
-                                    <div class="clients-slide__persona_picture">
-                                        <img src="img/client.png" alt="team member" />
-                                    </div>
-                                    <div class="clients-slide__persona_info">
-                                        <div class="clients-slide___name">NAME LASTNAME</div>
-                                        <div class="clients-slide__position">POSITION, COMPANY NAME</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clients-slide">
-                                <div class="clients-slide__text">
-                                    <div class="client-slide__text_content">
-                                        “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in”
-                                    </div>
-                                </div>
-                                <div class="clients-slide__persona">
-                                    <div class="clients-slide__persona_picture">
-                                        <img src="img/client.png" alt="team member" />
-                                    </div>
-                                    <div class="clients-slide__persona_info">
-                                        <div class="clients-slide___name">NAME LASTNAME</div>
-                                        <div class="clients-slide__position">POSITION, COMPANY NAME</div>
-                                    </div>
-                                </div>
+        </div> 
+        <div class="homepage__content_tab section">
+        <div class="homepage__section slider-overlay">
+            <div class="homepage__section-title clients-title" id="clients-say">
+                <h2>WHAT OUR CLIENTS SAY</h2>
+                <hr />
+            </div>
+            <div class="clients-slider__container">
+                <div class="clients-slider__content">
+                    <div class="clients-slide" id="slide">
+                        <div class="clients-slide__text">
+                            <div class="client-slide__text_content">
+                                “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in”
                             </div>
                         </div>
-                        <div class="clients-slider__navigation">
-                            <div class="clients-slider__stats">1/4</div>
+                        <div class="clients-slide__persona">
+                            <div class="clients-slide__persona_picture">
+                                <img src="img/client.png" alt="team member" />
+                            </div>
+                            <div class="clients-slide__persona_info">
+                                <div class="clients-slide___name">NAME LASTNAME</div>
+                                <div class="clients-slide__position">POSITION, COMPANY NAME</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="clients-logos">
-                        <div class="clients-logos-aligner">
-                            <div class="clients-logo">
-                                <img src="img/logo1.png" alt="logo1" />
+                    <div class="clients-slide">
+                        <div class="clients-slide__text">
+                            <div class="client-slide__text_content">
+                                “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in”
                             </div>
-                            <div class="clients-logo">
-                                <img src="img/logo2.png" alt="logo2" />
+                        </div>
+                        <div class="clients-slide__persona">
+                            <div class="clients-slide__persona_picture">
+                                <img src="img/client.png" alt="team member" />
                             </div>
-                            <div class="clients-logo">
-                                <img src="img/logo3.png" alt="logo3" />
+                            <div class="clients-slide__persona_info">
+                                <div class="clients-slide___name">NAME LASTNAME</div>
+                                <div class="clients-slide__position">POSITION, COMPANY NAME</div>
                             </div>
-                            <div class="clients-logo">
-                                <img src="img/logo4.png" alt="logo4" />
+                        </div>
+                    </div>
+                    <div class="clients-slide">
+                        <div class="clients-slide__text">
+                            <div class="client-slide__text_content">
+                                “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in”
+                            </div>
+                        </div>
+                        <div class="clients-slide__persona">
+                            <div class="clients-slide__persona_picture">
+                                <img src="img/client.png" alt="team member" />
+                            </div>
+                            <div class="clients-slide__persona_info">
+                                <div class="clients-slide___name">NAME LASTNAME</div>
+                                <div class="clients-slide__position">POSITION, COMPANY NAME</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients-slide">
+                        <div class="clients-slide__text">
+                            <div class="client-slide__text_content">
+                                “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in”
+                            </div>
+                        </div>
+                        <div class="clients-slide__persona">
+                            <div class="clients-slide__persona_picture">
+                                <img src="img/client.png" alt="team member" />
+                            </div>
+                            <div class="clients-slide__persona_info">
+                                <div class="clients-slide___name">NAME LASTNAME</div>
+                                <div class="clients-slide__position">POSITION, COMPANY NAME</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="latest-posts">
-                    <div class="homepage__section-title">
-                        <h2>LATEST POSTS</h2>
-                        <hr />
-                    </div> 
-                    <div class="latest-posts__container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="post-img post-1">
-                                    <img src="img/post1.png" class="img-responsive" alt="post" />    
-                                </div> 
-                                <div class="post-content">
-                                    <div class="post-content__stats">category / 16.01.2017</div>
-                                    <div class="post-content__title">post headline one or two lines</div>
-                                    <div class="post-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
-                                </div>
-                                <div class="read-more">
-                                    <p>READ MORE</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="post-img post-2">
-                                    <img src="img/post2.png" class="img-responsive" alt="post" />    
-                                </div>
-                                <div class="post-content">
-                                    <div class="post-content__stats">category / 16.01.2017</div>
-                                    <div class="post-content__title">post headline one or two lines</div>
-                                    <div class="post-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
-                                </div>
-                                <div class="read-more">
-                                     <p>READ MORE</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="post-img post-3">
-                                    <img src="img/post3.png" class="img-responsive" alt="post" />    
-                                </div>
-                                <div class="post-content">
-                                    <div class="post-content__stats">category / 16.01.2017</div>
-                                    <div class="post-content__title">post headline one or two lines</div>
-                                    <div class="post-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</div>
-                                </div>
-                                <div class="read-more">
-                                     <p>READ MORE</p>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="more-posts__container col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="more-posts-btn action-btn">MORE POSTS</div>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="map-container">
-                                    <img src="img/map.png" alt="map" />
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="row contact-us">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="homepage__section-title">
-                                    <h2>CONTACT US</h2>
-                                    <hr />
-                                </div>  
-                                <div class="contact-us__content">
-                                    <form name="contactForm" class="contact-form">
-                                    <div class="row"> 
-                                        
-                                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                                            <div class="form-title">LOCATIONS</div>  
-                                            <div class="row form-info-location-offset-bottom">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-sx-12">
-                                                    <div class="form-info-location" >
-                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                        23 des Samares Levis, <br />
-                                                        Quebec, Canada
-                                                    </div>
-                                                    <div class="form-info-location" >
-                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                        Kahenshtan str, 14, <br /> 
-                                                        Tel-Aviv, Israel
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-sx-12">
-                                                    <div class="form-info-location" >
-                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                        Vikentiya Khvoiky St, 18/14, <br /> 
-                                                        Kyiv, Ukraine
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="form-title">CONTACTS</div>
-                                            <div class="row contacts-info">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                                     +38 (093) 976 - 08 - 55
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                    info@dinamicka.com
-                                                </div>
-                                            </div>
-                        
-                                        </div>
-                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                                            <div class="form-group top-group">
-                                                <input type="text" placeholder="FULL NAME" /> 
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" placeholder="EMAIL" />
-                                            </div> 
-                                            <div class="form-group">
-                                                <input type="text" placeholder="SUBJECT" />    
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" placeholder="WHAT'S ON YOUR MIND?" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </form>
-                                    <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 send-btn__container">
-                                            <div class="send-btn action-btn">SEND</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="clients-slider__navigation">
+                    <div class="clients-slider__stats">1/4</div>
+                </div>
+            </div>
+            <div class="clients-logos">
+                <div class="clients-logos-aligner">
+                    <div class="clients-logo">
+                        <img src="img/logo1.png" alt="logo1" />
+                    </div>
+                    <div class="clients-logo">
+                        <img src="img/logo2.png" alt="logo2" />
+                    </div>
+                    <div class="clients-logo">
+                        <img src="img/logo3.png" alt="logo3" />
+                    </div>
+                    <div class="clients-logo">
+                        <img src="img/logo4.png" alt="logo4" />
                     </div>
                 </div>
             </div>
         </div>
+        </div> 
+        <div class="homepage__content_tab section homepage__section">
+        <div class="latest-posts">
+            <div class="homepage__section-title" id="latest-posts">
+                <h2>LATEST POSTS</h2>
+                <hr />
+            </div>
+            <div class="latest-posts__container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="post-img post-1">
+                            <img src="img/post1.png" class="img-responsive" alt="post" />
+                        </div>
+                        <div class="post-content">
+                            <div class="post-content__stats">category / 16.01.2017</div>
+                            <div class="post-content__title">post headline one or two lines</div>
+                            <div class="post-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                                sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                                aliquam quaerat voluptatem.</div>
+                        </div>
+                        <div class="read-more">
+                            <p>READ MORE</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="post-img post-2">
+                            <img src="img/post2.png" class="img-responsive" alt="post" />
+                        </div>
+                        <div class="post-content">
+                            <div class="post-content__stats">category / 16.01.2017</div>
+                            <div class="post-content__title">post headline one or two lines</div>
+                            <div class="post-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                                sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                                aliquam quaerat voluptatem.</div>
+                        </div>
+                        <div class="read-more">
+                            <p>READ MORE</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="post-img post-3">
+                            <img src="img/post3.png" class="img-responsive" alt="post" />
+                        </div>
+                        <div class="post-content">
+                            <div class="post-content__stats">category / 16.01.2017</div>
+                            <div class="post-content__title">post headline one or two lines</div>
+                            <div class="post-content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+                                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                                sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+                                aliquam quaerat voluptatem.</div>
+                        </div>
+                        <div class="read-more">
+                            <p>READ MORE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="more-posts__container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="more-posts-btn action-btn">MORE POSTS</div>
+                    </div>
+                </div>
+
+                </div>
+                </div>
+                </div>
+
+                <div class="homepage__content_tab section">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="map-container">
+                            <img src="img/map.png" alt="map" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row contact-us">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="homepage__section-title" id="contact-us">
+                            <h2>CONTACT US</h2>
+                            <hr />
+                        </div>
+                        <div class="contact-us__content">
+                            <form name="contactForm" class="contact-form">
+                                <div class="row">
+
+                                    <div class="col-lg-5vk col-md-5 col-sm-5 col-xs-12">
+                                        <div class="form-title">LOCATIONS</div>
+                                        <div class="row form-info-location-offset-bottom">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-sx-12">
+                                                <div class="form-info-location">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i> 23 des Samares Levis,
+                                                    <br /> Quebec, Canada
+                                                </div>
+                                                <div class="form-info-location">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i> Kahenshtan str, 14,
+                                                    <br /> Tel-Aviv, Israel
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-sx-12">
+                                                <div class="form-info-location">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i> Vikentiya Khvoiky
+                                                    St, 18/14, <br /> Kyiv, Ukraine
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-title">CONTACTS</div>
+                                        <div class="row contacts-info">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <i class="fa fa-phone" aria-hidden="true"></i> +38 (093) 976 - 08 - 55
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i> info@dinamicka.com
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                                        <div class="form-group top-group">
+                                            <input type="text" placeholder="FULL NAME" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" placeholder="EMAIL" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="SUBJECT" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="WHAT'S ON YOUR MIND?" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 send-btn__container">
+                                    <div class="send-btn action-btn">SEND</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
     </div>
     </div>
     </div>

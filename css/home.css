@@ -3,6 +3,8 @@
 html {
   min-height: 650px;
 }
+
+
 body {
   display: none;
   margin: 0;
@@ -141,7 +143,10 @@ a:hover {
 .homepage__section {
   width: 100%;
   height: 100%;
-  padding: 50px 10px;
+  padding: 50px;
+  padding-left: 10px;
+  padding-right: 15px;
+  box-sizing: border-box;
   color: #2b2b2b;
 }
 .homepage__section-title {
@@ -289,13 +294,10 @@ a:hover {
 /* _________________ team _________________ */
 .team-slider__container {
   padding-left: 10%;
-  margin-left: -15px;
-  padding-right: 15%;
-  position: absolute;
+  height: 480px;
 }
 .team-slider__content {
   width: 70%;
-  position: absolute!important;
   overflow: hidden;
   margin-top: 75px;
 }
@@ -303,7 +305,6 @@ a:hover {
   height: 2px;
   background: #9855d4;
   width: 225px;
-  position: absolute;
   box-sizing: content-box;
 }
 .slide-tab {
@@ -313,22 +314,22 @@ a:hover {
   height: 7px;
   margin-top: 0px;
   background: #9855d4;
-  position: absolute;
   margin-top: -2px;
   cursor: pointer;
+  width: 27.5%;
 }
 .slider-stats {
-  position: absolute;
   margin-top: -25px;
   right: 0;
   font-weight: 600;
+  float: right;
+  margin-right: 35px;
 }
 .team-slider__controls {
   width: 260px;
   box-sizing: border-box;
   margin-left: 10px;
-  position: absolute;
-  bottom: -45%;
+  margin-top: 50px;
 }
 .slide {
   display: none;
@@ -383,6 +384,9 @@ a:hover {
 .clients-slider__navigation .arrow-right {
   margin-left: 10px;
 }
+.clients-title {
+  margin-top: 50px;
+}
 .clients-section .slider-overlay {
   padding: 50px 0;
   height: unset;
@@ -434,6 +438,9 @@ a:hover {
   margin-top: 6px;
   font-weight: 600;
 }
+.clients-section .homepage__section {
+  padding: 50px 0;
+}
 .clients-slide__persona_picture {
   width: 80px;
   height: 80px;
@@ -448,8 +455,11 @@ a:hover {
   background: #eeeeee;
   padding-top: 50px;
   padding-bottom: 50px;
-  width: 100%;
-  margin-left: -25px;
+  width: 101%;
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  right: 0;
 }
 .clients-logos .clients-logos-aligner {
   width: 80%;
@@ -473,10 +483,13 @@ a:hover {
   margin-right: -25px;
 }
 /*____________________________________latest posts__________________________________*/
+.simplebar-scroll-content {
+  box-sizing: border-box !important;
+}
 .latest-posts__container {
   margin-top: 75px;
   padding: 0 15px;
-  margin-right: 35px;
+  margin-right: 25px;
 }
 .post-img {
   background: #fff;
@@ -535,7 +548,7 @@ a:hover {
 }
 /* __________________________________________ contact us _________________________________________________ */
 .map-container {
-  margin-top: 25px;
+  margin-top: -32px;
   margin-left: -15px;
   margin-right: -25px;
   margin-bottom: 50px;
@@ -585,7 +598,7 @@ a:hover {
   margin-right: 10%;
 }
 .send-btn__container {
-  padding: 50px;
+  padding: 50px 15px 50px 0;
 }
 .send-btn {
   width: 120px;
@@ -593,6 +606,11 @@ a:hover {
   margin-right: 15px;
 }
 /* ____________________________________________media queries ______________________________________________ */
+@media screen and (min-width: 1600px) {
+  .clients-title {
+    margin-top: 80px;
+  }
+}
 @media screen and (max-width: 1350px) {
   .team-slider__controls {
     bottom: -50%;
@@ -606,6 +624,12 @@ a:hover {
   }
   .clients-logos {
     margin-top: 50px;
+  }
+  .team-overlay {
+    padding-top: 0;
+  }
+  .clients-title {
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 1200px) {
