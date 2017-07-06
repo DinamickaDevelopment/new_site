@@ -1,0 +1,58 @@
+/* ______________________ sidebar ______________________ */
+.nav ul {
+  list-style-type: none;
+  color: #2b2b2b;
+}
+.nav__main > li {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.nav__main_home-options {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: 200;
+  font-size: 14px;
+  color: #2b2b2b;
+  padding-left: 15px;
+}
+.nav__main_home-options li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.homepage__sidebar_logo-container {
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+.homepage__sidebar_logo-text {
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 30px;
+}
+.social-wrap {
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+.social-wrap i {
+  font-size: 25px;
+  padding: 20px;
+  cursor: pointer;
+}
+.homepage__sidebar {
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  z-index: 100;
+  background: #fff;
+  min-height: 700px; 
+  padding-bottom: 20px;
+} 
+.abs {
+  position: absolute; 
+}

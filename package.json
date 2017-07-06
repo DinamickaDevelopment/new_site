@@ -1,27 +1,36 @@
 {
-  "name": "dd_site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "v2",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.0.10"
+  },
   "dependencies": {
-    "less": "^2.7.2",
-    "owl.carousel": "^2.2.0",
-    "simplebar": "^2.4.3",
-    "slick-carousel": "^1.6.0"
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^4.7.2",
+    "history": "^4.6.3",
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-fontawesome": "^1.6.1",
+    "react-fullpage": "^0.1.18",
+    "react-ga": "^2.2.0",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "react-scrollbar": "^0.5.1",
+    "react-slick": "^0.14.11",
+    "redux": "^3.7.1",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-persist": "^4.8.2",
+    "redux-thunk": "^2.2.0",
+    "request": "^2.81.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DinamickaDevelopment/new_site.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DinamickaDevelopment/new_site/issues"
-  },
-  "homepage": "https://github.com/DinamickaDevelopment/new_site#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
