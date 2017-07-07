@@ -1,7 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import * as actions from '../actions';
-import { Sidebar, ServiceTab, ProjectTab } from './';
+import * as actions from '../actions'; 
+
+
+import { 
+	Sidebar, 
+	ServiceTab, 
+	OurProjects, 
+	OurServices, 
+	LatestPosts, 
+	OurTeam, 
+	Testimonials, 
+	ContactUs, 
+	Intro, 
+	HomeMobile   
+} from './'; 
+
 import './css/Home.css';
 import { ScrollToTopOnMount, SectionsContainer, Section } from '../lib/fullpage';
 
@@ -13,7 +27,9 @@ class Home extends Component {
 		this.state = {
 			isMobile: false, 
 			revealed: false,  
-			tab_h: 0
+			tab_h: 0, 
+			h: 0, 
+			offset: 0
 		}
 
 		this.resizeHandler = this.resizeHandler.bind(this);
@@ -40,18 +56,20 @@ class Home extends Component {
 	}
 
 	resizeHandler() {
-		if (window.innerWidth < 768 && !this.state.isMobile) {
+		if (window.innerWidth < 900 && !this.state.isMobile) {
 			this.setState({
 				isMobile: true
 			})
-		} else if (window.innerWidth >= 768 && this.state.isMobile) {
+		} else if (window.innerWidth >= 900 && this.state.isMobile) {
 			this.setState({
 				isMobile: false
 			})
 
-		} else if (window.innerWidth >= 768) {
+		} else if (window.innerWidth >= 900) {
 			this.setState({
-				tab_h: window.innerHeight / 2.6
+				tab_h: window.innerHeight / 2.6, 
+				h: window.innerHeight, 
+				offset: (window.innerHeight * 5) - 125 
 			})
 		}
 
@@ -75,7 +93,7 @@ class Home extends Component {
 		}; 
 
 		let {PUBLIC_URL} = process.env; 
-		let {tab_h} = this.state;
+		let {tab_h, h, offset} = this.state;
 		return (<div className="scroll-wrapper">
 
 			{!this.state.isMobile ?
@@ -83,198 +101,17 @@ class Home extends Component {
 					<Sidebar />
 					<div className="homepage__content">
 						<SectionsContainer {...options}> 
-							<Section>
-								<div className="homepage__content_tab centered">
-									<div className="home-intro__container">
-										<div className="home-intro__container_title">
-											<h1>Dinamicka Development</h1>
-											<h3>Tiny little small description</h3>
-										</div>
-									</div>
-									<a className="scroll-down-btn" href="#what-we-do">
-										<div>Scroll to learn more</div>
-										<div><i className="fa fa-caret-down" aria-hidden="true"></i></div>
-									</a>
-								</div>
-							</Section>
-							<Section>
-								<div className="homepage__content_tab_block"> 
-								<div className="row">
-									<div className="homepage__section-title">
-										<h2>WHAT WE DO</h2>
-										<hr />
-									</div>
-								</div>
-									<div className="what-we-do__tabs">
-										<div className="row">
-											<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-left">
-												<ServiceTab 
-													tabClass="small-tab" 
-													h={tab_h}
-													src="/images/web.png" 
-													content={<span>web <br /> development</span>}
-													/>
-											</div>
-											<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-center">
-												<ServiceTab 
-													tabClass="small-tab" 
-													h={tab_h}
-													src="/images/mob.png" 
-													content={<span>mobile <br /> development</span>}
-													/>
-											</div>
-											<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-right">
-												<ServiceTab 
-													tabClass="small-tab" 
-													h={tab_h}
-													src="/images/ui.png"  
-													content={<span>ui/ux</span>}
-													/>
-											</div>
-										</div>
-										<div className="row">
-											<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-left">
-												<ServiceTab 
-													tabClass="small-tab" 
-													h={tab_h}
-													src="/images/marketing.png"  
-													content={<span>internet <br /> marketing</span>}
-													/>
-											</div>
-											<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-center">
-												<ServiceTab 
-													tabClass="small-tab" 
-													h={tab_h}
-													src="/images/copy.png"  
-													content={<span>copywriting</span>}
-													/>
-											</div>
-											<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-right">
-												<ServiceTab 
-													tabClass="small-tab" 
-													h={tab_h}
-													src="/images/hr.png"  
-													content={<span>hr <br /> services</span>}
-													/>
-											</div>
-										</div>
-									</div>			
-								</div>
-							</Section>
-							<Section>
-								<div className="homepage__content_tab_block"> 
-									<div className="row">
-										<div className="homepage__section-title">
-											<h2>OUR RECENT WORKS</h2>
-											<hr />
-										</div>
-										<div className="recent-works__filter">
-											<span className="active">ALL</span>
-											<span>WEB</span>
-											<span>MOBILE</span>
-											<span>UI/UX</span>
-										</div>
-									</div> 
-									<div className="row">
-										<div className="recent-works__tabs">
-											<div className="row">
-												<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-left"> 
-													<ProjectTab 
-														h={tab_h}
-														tabClass="small-tab" 
-														colorClass="recent-works-violet" 
-														title="PROJECT TITLE"
-														category="WEB DEVELOPMENT"
-														offsetClass="top-offset"
-													/>
-													<ProjectTab 
-														h={tab_h}
-														tabClass="small-tab" 
-														colorClass="recent-works-gray" 
-														title="PROJECT TITLE"
-														category="WEB DEVELOPMENT"
-														offsetClass="full-offset"
-													/>
-												</div>
-												<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-center"> 
-													<ProjectTab 
-														h={tab_h * 2}
-														tabClass="big-tab" 
-														colorClass="recent-works-gradient-green" 
-														title="PROJECT TITLE"
-														category="WEB DEVELOPMENT"
-														offsetClass="full-offset"
-													/>
-												</div>
-												<div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-right">
-													<ProjectTab 
-														h={tab_h}
-														tabClass="small-tab" 
-														colorClass="recent-works-gradient-violet" 
-														title="PROJECT TITLE"
-														category="WEB DEVELOPMENT"
-														offsetClass="top-offset"
-													/>
-													<div className="recent-works__tabs_tab small-tab"
-														style={{height: tab_h}}>
-														<div className="recent-works-placeholder recent-works-white centered-tab">
-															<div className="recent-works__all-projects-btn">
-																<div>ALL PROJECTS <i className="fa fa-chevron-right" aria-hidden="true"></i></div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</Section>
-							<Section>
-								<div className="homepage__content_tab_block"> 
-									<div className="row">
-										<div className="homepage__section-title">
-											<h2>OUR TEAM</h2>
-											<hr />
-										</div>
-									</div>
-								</div>
-							</Section>
-							<Section>
-								<div className="homepage__content_tab_block"> 
-									<div className="row">
-										<div className="homepage__section-title">
-											<h2>WHAT OUR CLIENTS SAY</h2>
-											<hr />
-										</div>
-									</div>
-								</div>
-							</Section>
-							<Section>
-								<div className="homepage__content_tab_block"> 
-									<div className="row">
-										<div className="homepage__section-title">
-											<h2>LATEST POSTS</h2>
-											<hr />
-										</div>
-									</div>
-								</div>
-							</Section>
-							<Section>
-								<div className="homepage__content_tab_block"> 
-									<div className="row">
-										<div className="homepage__section-title">
-											<h2>CONTACT US</h2>
-											<hr />
-										</div>
-									</div>
-								</div>
-							</Section>
+							<Section><Intro /></Section>
+							<Section><OurServices h={tab_h} /></Section>
+							<Section><OurProjects h={tab_h} /></Section>
+							<Section><OurTeam /></Section>
+							<Section><Testimonials h={h} offset={offset}/></Section>
+							<Section><LatestPosts /></Section>
+							<Section><ContactUs /></Section>
 						</SectionsContainer>
 					</div>
 				</div> :
-				<div className="homepage-mob">
-
-				</div>
+				<HomeMobile /> 
 			} </div>)
 	}
 }

@@ -160,7 +160,6 @@ export default class SectionsContainer extends React.Component {
 
     _handleResize(fromInit) {
 
-
         const position = 0 - (this.state.activeSection * window.innerHeight);
 
         if (fromInit === 'fromInit') {

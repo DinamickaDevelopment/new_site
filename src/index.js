@@ -9,6 +9,8 @@ import 'font-awesome/css/font-awesome.css';
 import configureStore from './store'; 
 import {Home} from './components'; 
 import registerServiceWorker from './registerServiceWorker';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 const store = configureStore();  
 
@@ -20,7 +22,9 @@ persistStore(store, {blacklist: ['routing']}, () => {
 	ReactDOM.render(
 	<Provider store={store}>
 		<Router history={history}>
-			<Route path="/" component={Home} />
+			<div>
+				<Route path="/" component={Home} />
+			</div>
 		</Router>
 	</Provider>, 
 	document.getElementById('root'));

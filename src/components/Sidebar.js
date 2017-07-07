@@ -18,7 +18,7 @@ export default class Sidebar extends Component {
                 <div className="nav">
                     <ul className="nav__main">
                         <li>
-                            HOME
+                            <a href="#home">HOME</a>
                             <ul className="nav__main_home-options">
                                 <li><a href="#what-we-do">WHAT WE DO</a></li>
                                 <li><a href="#our-projects">OUR RECENT WORKS</a></li>

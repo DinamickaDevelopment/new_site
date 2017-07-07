@@ -1,0 +1,65 @@
+/* __________________________________________ contact us _________________________________________________ */
+.map-container {
+  margin-top: -32px;
+  margin-left: -15px;
+  margin-right: -25px;
+  margin-bottom: 50px;
+}
+.map-container img {
+  width: 100%;
+  height: auto; 
+  margin-left: -15px;
+}
+.contact-form {
+  margin-top: 35px;
+}
+.contact-form i {
+  color: #9855d4;
+}
+.contact-form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none!important;
+  width: 100%;
+}
+.contact-form input:focus {
+  border-bottom: 1px solid #000;
+}
+.contact-form .form-group {
+  margin-bottom: 0; 
+}
+
+.contact-form .top-group {
+  margin-top: 15px;
+}
+.form-title {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 35px;
+}
+.form-info-location {
+  margin-bottom: 15px;
+}
+.form-info-location-offset-top {
+  margin-top: 60px;
+}
+.form-info-location-offset-bottom {
+  margin-bottom: 50px;
+}
+.contact-us__content {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.send-btn__container {
+  padding: 30px 15px 50px 0;
+}
+.send-btn {
+  width: 120px;
+  float: right;
+  margin-right: 15px;
+} 
+
+.no-offset {
+    margin-top: 0!important; 
+}
