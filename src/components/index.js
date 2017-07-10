@@ -9,7 +9,8 @@ import Testimonials from './Clients'
 import OurTeam from './Team' 
 import ContactUs from './ContactUs'  
 import Intro from './Intro' 
-import HomeMobile from './HomeMobile'
+import HomeMobile from './HomeMobile' 
+import MobileNav from './MobileNav' 
 
 export {
 	Home, 
@@ -23,5 +24,6 @@ export {
 	OurTeam, 
 	ContactUs, 
 	Intro, 
-	HomeMobile
+	HomeMobile, 
+	MobileNav
 }

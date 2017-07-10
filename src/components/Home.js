@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import * as actions from '../actions'; 
+import * as actions from '../actions';  
+import debounce from 'debounce'; 
 
 
 import { 
@@ -29,6 +30,7 @@ class Home extends Component {
 			revealed: false,  
 			tab_h: 0, 
 			h: 0, 
+			w: 0, 
 			offset: 0
 		}
 
@@ -37,7 +39,7 @@ class Home extends Component {
 
 	componentDidMount() {
 
-		window.addEventListener('resize', this.resizeHandler); 
+		window.addEventListener('resize', debounce(this.resizeHandler, 100)); 
 		this.resizeHandler(); 
 
 		console.log(window.location.hash)
@@ -55,23 +57,37 @@ class Home extends Component {
 		window.removeEventListener(this.resizeHandler);
 	}
 
-	resizeHandler() {
-		if (window.innerWidth < 900 && !this.state.isMobile) {
+	resizeHandler() {	
+		if (window.innerWidth < 1025 && this.state.isMobile) {
 			this.setState({
-				isMobile: true
+				h: window.innerHeight, 
+				w: window.innerWidth, 
+			})	
+		}
+		if (window.innerWidth < 1025 && !this.state.isMobile) {
+			this.setState({
+				isMobile: true, 
+				h: window.innerHeight, 
+				w: window.innerWidth, 
 			})
-		} else if (window.innerWidth >= 900 && this.state.isMobile) {
+		} else if (window.innerWidth >= 1025 && this.state.isMobile) {
 			this.setState({
-				isMobile: false
+				isMobile: false, 
+				tab_h: window.innerHeight / 2.6, 
+				h: window.innerHeight, 
+				w: window.innerWidth, 
+				offset: (window.innerHeight * 5) - 125 
 			})
 
-		} else if (window.innerWidth >= 900) {
+		} 
+		else if (window.innerWidth >= 1025) {
 			this.setState({
 				tab_h: window.innerHeight / 2.6, 
 				h: window.innerHeight, 
+				w: window.innerWidth, 
 				offset: (window.innerHeight * 5) - 125 
 			})
-		}
+		} 
 
 
 	}
@@ -89,16 +105,20 @@ class Home extends Component {
 			sectionPaddingTop: '0',
 			sectionPaddingBottom: '0',
 			verticalAlign: false,
-			scrollCallback: (states) => this.setState({ current: states.activeSection })
+			scrollCallback: (states) => this.setState({ current: states.activeSection }), 
+			isMobile: this.state.isMobile, 
+			h: this.state.h, 
+			w: this.state.w
 		}; 
 
 		let {PUBLIC_URL} = process.env; 
-		let {tab_h, h, offset} = this.state;
+		let {tab_h, h, w, offset} = this.state;
 		return (<div className="scroll-wrapper">
 
 			{!this.state.isMobile ?
 				<div className={"homepage-react " + (this.state.revealed ? '' : 'to-reveal')}>
 					<Sidebar />
+					<ScrollToTopOnMount />
 					<div className="homepage__content">
 						<SectionsContainer {...options}> 
 							<Section><Intro /></Section>
@@ -111,7 +131,7 @@ class Home extends Component {
 						</SectionsContainer>
 					</div>
 				</div> :
-				<HomeMobile /> 
+				<HomeMobile h={h} w={w} /> 
 			} </div>)
 	}
 }

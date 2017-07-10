@@ -63,3 +63,11 @@
 .no-offset {
     margin-top: 0!important; 
 }
+
+.contacts-text {
+  margin-bottom: 15px; 
+}
+
+.contacts-text span {
+  white-space: nowrap; 
+}

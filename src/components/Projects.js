@@ -41,7 +41,7 @@ export default class OurProjects extends Component {
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 tab-wrap-center"> 
                             <ProjectTab 
-                                h={h * 2}
+                                h={window.innerWidth >= 768 ? (h * 2) : h}
                                 tabClass="big-tab" 
                                 colorClass="recent-works-gradient-green" 
                                 title="PROJECT TITLE"
@@ -58,8 +58,8 @@ export default class OurProjects extends Component {
                                 category="WEB DEVELOPMENT"
                                 offsetClass="top-offset"
                             />
-                            <div className="recent-works__tabs_tab small-tab"
-                                style={{height: h}}>
+                            <div className="recent-works__tabs_tab small-tab project-btn-tab"
+                                style={window.innerWidth >= 768 ? {height: h} : {height: 60, marginTop: 10}}>
                                 <div className="recent-works-placeholder recent-works-white centered-tab">
                                     <div className="recent-works__all-projects-btn">
                                         <div>ALL PROJECTS <i className="fa fa-chevron-right" aria-hidden="true"></i></div>

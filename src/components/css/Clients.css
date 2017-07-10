@@ -4,15 +4,15 @@
   background: #eeeeee;
   padding-top: 50px;
   padding-bottom: 50px;
-  width: 101%;
+  /*width: 101%;*/
   position: absolute;
   left: -10px;
   right: 0;
 }
 .clients-logos .clients-logos-aligner {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+
+    width: 80%;
+margin: 0 auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -55,7 +55,7 @@
 }
 .slider-aligner {
     display: flex; 
-    height: 80%; 
+    height: 72%; 
     width: 100%;
     align-items: center; 
 }
@@ -77,24 +77,26 @@
 .clients-slider-container {
     width: 70%;  
     margin: 75px auto; 
-    height: 400px; 
 } 
 
-.clients-slide-aligner {
-    width: 100%; 
-    height: 100%; 
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+.slick-arrow {
+    margin-top: -20px; 
 }
-
 
 .clients-slide {
     margin: 0 auto; 
-    width: 85%;
+    width: 90%;
+}
+
+.clients-slider-underlay {
+    width: 68%;
+    position: absolute;
+    width: 8;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background: #fafafa; 
+    margin-left: 5px; 
 }
 
 .clients-slider-container .slick-prev {
@@ -120,7 +122,61 @@
     color: #9855d4!important; 
     font-size: 60px; 
  
+}
+ 
+
+.clients-slide-underlay__container {
+    height: 155px;
+    background: #fafafa; 
+    /* margin-top: -203px; */
+    width: 95%;
+    margin: 0 auto;
+    margin-top: -208px;
+    width: 200%;
+    position: relative;
+    z-index: -100;
+    margin-bottom: 50px;
 } 
+
+.nav-dots {
+    bottom: -50px!important; 
+}
+
+.nav-dots .slick-active button::before {
+    color: #9855d4!important; 
+    font-size: 8px; 
+    padding-top: 1px;
+}
+
+.nav-dots button:hover:before, .nav-dots button:focus:before {
+    color: #9855d4!important; 
+}
+
+.clients-logos-mobile {
+    display: none; 
+}
+
+@media screen and (max-width: 1700px) {
+    .slider-aligner {
+        display: flex; 
+        height: 68%; 
+    }
+}
+ 
+@media screen and (max-width: 1400px) {
+    .clients-slider-underlay {
+        margin-top: 80px; 
+    }     
+    
+    .slider-aligner {
+        display: flex; 
+        height: 65%; 
+    }
+
+    .clients-slider-underlay {
+        margin-left: -2px;
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .clients-slider-container {
@@ -129,5 +185,24 @@
 
     .clients-slide__text {
         font-size: 16px; 
+    } 
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .clients-logos-aligner {
+        display: none!important; 
+    }
+
+    .clients-logos-mobile {
+        display: block; 
+    }
+    .clients-logo-group {
+        text-align: center; 
+    }
+    .clients-logo-group div {
+        display: inline-block; 
+        padding: 15px; 
     }
 }

@@ -44,13 +44,20 @@ class SliderNavigation extends Component {
 export default class OurTeam extends Component {
     render() {  
         let {PUBLIC_URL} = process.env 
-        let settings = {
+        let settings = { 
+            arrows: false, 
             slidesToScroll: 1,
             slidesToShow: 2,
             autoplay: true,
             autoplaySpeed: 5000,
             speed: 250, 
             centerMode: false, 
+            responsive: [{breakpoint: 1024, settings: {
+                dots: true, 
+                dotsClass: 'slick-dots slick-thumb nav-dots', 
+                slidesToShow: 1, 
+                autoplay: false 
+            }}], 
             waitForAnimate: false
         }
         return (

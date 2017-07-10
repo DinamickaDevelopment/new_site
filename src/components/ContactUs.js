@@ -97,11 +97,31 @@ export default class ContactUs extends Component {
                 <div className="contact-us__content">
                     <form name="contactForm" className="contact-form">
                         <div className="row">
-
-                            <div className="col-lg-5vk col-md-5 col-sm-5 col-xs-12">
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-lg hidden-md">
+                                <div className="locations"> 
+                                    <div className="icon-location">
+                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
+                                    </div>
+                                    <div className="form-info-location">
+                                        23 des Samares Levis, Quebec, Canada
+                                    </div>
+                                    <div className="form-info-location">
+                                        Kahenshtan str, 14, Tel-Aviv, Israel
+                                    </div>
+                                    <div className="form-info-location">
+                                        Vikentiya Khvoiky
+                                        St, 18/14, Kyiv, Ukraine
+                                    </div>
+                                </div>
+                                <div className="contacts">
+                                    <div><i className="fa fa-phone" aria-hidden="true"></i> +38 (093) 976 - 08 - 55</div>
+                                    <div><i className="fa fa-envelope" aria-hidden="true"></i> info@dinamicka.com</div>
+                                </div>
+                            </div>
+                            <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12 hidden-sm hidden-xs">
                                 <div className="form-title">LOCATIONS</div>
                                 <div className="row form-info-location-offset-bottom">
-                                    <div className="col-lg-6 col-md-6 col-sm-6 col-sx-12">
+                                    <div className="col-lg-6 col-md-12 col-sm-12 col-sx-12">
                                         <div className="form-info-location">
                                             <i className="fa fa-map-marker" aria-hidden="true"></i> 23 des Samares Levis,
                                             <br /> Quebec, Canada
@@ -111,7 +131,7 @@ export default class ContactUs extends Component {
                                             <br /> Tel-Aviv, Israel
                                         </div>
                                     </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-6 col-sx-12">
+                                    <div className="col-lg-6 col-md-12 col-sm-12 col-sx-12">
                                         <div className="form-info-location">
                                             <i className="fa fa-map-marker" aria-hidden="true"></i> Vikentiya Khvoiky
                                             St, 18/14, <br /> Kyiv, Ukraine
@@ -120,15 +140,19 @@ export default class ContactUs extends Component {
                                 </div>
                                 <div className="form-title">CONTACTS</div>
                                 <div className="row contacts-info">
-                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <i className="fa fa-phone" aria-hidden="true"></i> +38 (093) 976 - 08 - 55
+                                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12"> 
+                                    <div className="contacts-text">
+                                        <i className="fa fa-phone" aria-hidden="true"></i> <span>+38 (093) 976 - 08 - 55</span>
                                     </div>
-                                    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <i className="fa fa-envelope" aria-hidden="true"></i> info@dinamicka.com
+                                    </div>
+                                    <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div className="contacts-text">
+                                        <i className="fa fa-envelope" aria-hidden="true"></i> <span>info@dinamicka.com</span>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                            <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                               <MuiThemeProvider muiTheme={getMuiTheme(styles.mui_theme)}> 
                                 <div> 
                                     <div className="form-group top-group">

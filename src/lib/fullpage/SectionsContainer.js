@@ -57,9 +57,7 @@ export default class SectionsContainer extends React.Component {
         });
 
 
-        window.addEventListener('resize', this._handleResize);
-
-
+        // window.addEventListener('resize', this._handleResize);
 
 
     }
@@ -70,11 +68,16 @@ export default class SectionsContainer extends React.Component {
             this._setAnchor(nextProps.activeSection);
             this._handleSectionTransition(nextProps.activeSection);
             this._addActiveClass();
-        }
+        } 
+
+
+        if (this.props.h != nextProps.h || this.props.w != nextProps.w && !nextProps.isMobile) { 
+            this._handleResize(); 
+        } 
     }
 
     _removeDefaultEventListeners() {
-        window.removeEventListener('resize', this._handleResize);
+        // window.removeEventListener('resize', this._handleResize);
         window.removeEventListener('hashchange', this._handleAnchor);
 
 
@@ -158,7 +161,7 @@ export default class SectionsContainer extends React.Component {
         this._addActiveClass();
     }
 
-    _handleResize(fromInit) {
+    _handleResize(fromInit, fromMobile) {
 
         const position = 0 - (this.state.activeSection * window.innerHeight);
 
