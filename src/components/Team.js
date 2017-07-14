@@ -51,10 +51,10 @@ export default class OurTeam extends Component {
             autoplay: true,
             autoplaySpeed: 5000,
             speed: 250, 
+            dots: true, 
+            dotsClass: 'slick-dots slick-thumb nav-dots', 
             centerMode: false, 
             responsive: [{breakpoint: 1024, settings: {
-                dots: true, 
-                dotsClass: 'slick-dots slick-thumb nav-dots', 
                 slidesToShow: 1, 
                 autoplay: false 
             }}], 

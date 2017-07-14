@@ -1,5 +1,5 @@
 import React, {Component} from 'react'; 
-import './css/Sidebar.css'; 
+import './css/Sidebar.css';  
 
 export default class Sidebar extends Component {
 	render() {
@@ -7,8 +7,8 @@ export default class Sidebar extends Component {
 		return (
 	        <div className="homepage__sidebar">
             <div className="homepage__sidebar_logo-container">
-            <a href="#home">
-                <img src={PUBLIC_URL + "/images/logo.png"} alt="Logo" />
+            <a href="/home">
+                <img src={PUBLIC_URL + "/images/new_logo.png"} alt="Logo" />
                 <div className="homepage__sidebar_logo-text">
                     DINAMICKA <br /> DEVELOPMENT
                 </div>
@@ -18,19 +18,19 @@ export default class Sidebar extends Component {
                 <div className="nav">
                     <ul className="nav__main">
                         <li>
-                            <a href="#home">HOME</a>
+                            <a href="/home">HOME</a>
                             <ul className="nav__main_home-options">
-                                <li><a href="#what-we-do">WHAT WE DO</a></li>
-                                <li><a href="#our-projects">OUR RECENT WORKS</a></li>
-                                <li><a href="#team">OUR TEAM</a></li>
-                                <li><a href="#our-clients">WHAT OUR CLIENTS SAY</a></li>
-                                <li><a href="#latest-posts">LATEST POSTS</a></li>
-                                <li><a href="#contact-us">CONTACT US</a></li>
+                                <li><a href="/home#what-we-do">WHAT WE DO</a></li>
+                                <li><a href="/home#our-projects">OUR RECENT WORKS</a></li>
+                                <li><a href="/home#team">OUR TEAM</a></li>
+                                <li><a href="/home#our-clients">WHAT OUR CLIENTS SAY</a></li>
+                                <li><a href="/home#latest-posts">LATEST POSTS</a></li>
+                                <li><a href="/home#contact-us">CONTACT US</a></li>
                             </ul>
                         </li>
-                        <li>OUR PROJECTS</li>
-                        <li>HOW WE DO THINGS</li>
-                        <li>BLOG</li>
+                        <li><a href="/our-projects">OUR PROJECTS</a></li>
+                        <li><a href="/how-we-do-things">HOW WE DO THINGS</a></li>
+                        <li><a href="/blog">BLOG</a></li>
                     </ul>
                 </div>
             </div>

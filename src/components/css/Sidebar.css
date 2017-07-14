@@ -56,3 +56,14 @@
 .abs {
   position: absolute; 
 }
+.homepage__sidebar_logo-container img {
+  width: 70px; 
+}
+
+/*_____________________________________ media queries ________________________________________ */
+
+@media screen and (max-height: 800px) {
+  .homepage__sidebar_logo-container {
+    margin-bottom: 50px; 
+  }
+}

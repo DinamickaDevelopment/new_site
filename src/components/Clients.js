@@ -88,7 +88,8 @@ export default class Testimonials extends Component {
                 </Slider>
                 </div>
                 </div>
-                <div className="clients-logos" style={{top: offset}}>
+                <div className="clients-logos" style={{top: offset}}> 
+                <div className="clients-logos-fill"></div>
                 <div className="clients-logos-aligner"> 
                     <div className="clients-logo">
                         <img src={PUBLIC_URL + "images/logo1.png"} alt="logo1" />

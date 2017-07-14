@@ -61,3 +61,11 @@
   font-weight: 900;
   cursor: pointer;
 }
+
+/* ________________________________ media queries _________________________________ */
+
+@media screen and (max-width: 1024px), screen and (max-height: 700px) {
+    .more-posts__container {
+        padding: 30px 15px; 
+    }
+}

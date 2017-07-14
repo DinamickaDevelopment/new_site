@@ -3,13 +3,16 @@
   margin-top: -32px;
   margin-left: -15px;
   margin-right: -25px;
-  margin-bottom: 50px;
+  margin-bottom: 50px; 
+  background-size: cover; 
+  background-image: url(../../assets/map.png); 
+  background-repeat: no-repeat; 
 }
-.map-container img {
+/*.map-container img {
   width: 100%;
   height: auto; 
   margin-left: -15px;
-}
+}*/
 .contact-form {
   margin-top: 35px;
 }
@@ -70,4 +73,84 @@
 
 .contacts-text span {
   white-space: nowrap; 
+}  
+
+
+/*______________________________________ media queries ____________________________________________ */
+
+@media screen and (max-width: 1300px) {
+    .form-info-location-offset-bottom {
+        margin-bottom: 8px; 
+    }
+
+    .form-title {
+        margin-bottom: 10px; 
+    }
+    .contact-form .top-group {
+      margin-top: -32px; 
+    }
+
+    .contact-form .fotm-group {
+      margin-bottom: -2px; 
+    }
+}
+
+@media screen and (max-width: 1024px), screen and (max-height: 700px) {
+    .icon-location + .form-info-location {
+        margin-left: 31px; 
+        margin-top: -31px;
+    }
+
+
+    .icon-location {
+        font-size: 22px; 
+    }
+    .locations {
+        margin-bottom: 20px; 
+    }
+    .contacts i {
+        margin-right: 15px;
+    }
+    .map-container img {
+        height: 200px; 
+        width: auto; 
+    } 
+    .action-btn {
+        background: #2b2b2b; 
+        width: 100%; 
+        float: none; 
+        margin-right: 0; 
+    }
+    .send-btn__container {
+        padding: 30px 15px; 
+    }
+
+    .contacts {
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form-info-location {
+        margin-left: 31px; 
+        margin-bottom: 2px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .what-we-do__tabs_tab {
+        padding: 0;
+        padding-bottom: 10px; 
+    }
+
+    .info-location {
+        font-size: 22px;
+    } 
+
+    .contact-us__content {
+        margin: 15px;
+    }
+
+
 }

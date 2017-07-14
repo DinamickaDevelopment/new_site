@@ -89,7 +89,6 @@ margin: 0 auto;
 }
 
 .clients-slider-underlay {
-    width: 68%;
     position: absolute;
     width: 8;
     height: 200px;
@@ -97,6 +96,7 @@ margin: 0 auto;
     margin-top: 50px;
     background: #fafafa; 
     margin-left: 5px; 
+    width: 68.3%;
 }
 
 .clients-slider-container .slick-prev {
@@ -145,7 +145,12 @@ margin: 0 auto;
 .nav-dots .slick-active button::before {
     color: #9855d4!important; 
     font-size: 8px; 
-    padding-top: 1px;
+    padding-top: 1px; 
+ 
+}
+
+.slick-dots li button:before {
+    content: '\2022';
 }
 
 .nav-dots button:hover:before, .nav-dots button:focus:before {
@@ -155,6 +160,9 @@ margin: 0 auto;
 .clients-logos-mobile {
     display: none; 
 }
+
+/*____________________________________ media queries __________________________________ */
+ 
 
 @media screen and (max-width: 1700px) {
     .slider-aligner {
@@ -187,7 +195,60 @@ margin: 0 auto;
         font-size: 16px; 
     } 
 
+    .clients-logo img {
+        width: 140px;
+    }
+}
 
+@media screen and (max-width: 1024px), screen and (max-height: 700px) {
+      .clients-logos-fill {
+        background: #eeeeee;
+        width: 105%;
+        position: absolute;
+        height: 100%;
+        margin-top: -50px;
+        margin-left: -10px
+    }
+    .map-container {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .clients-slide__text {
+        font-size: 14px; 
+    } 
+    .clients-logos {
+        position: relative; 
+        margin-top: 50px; 
+        width: 100%; 
+    }
+    .clients-logos-aligner {
+        margin-left: 0; 
+        width: 100%; 
+    }  
+    .clients-slider-container .slick-arrow {
+        display: none!important; 
+    }
+
+    .clients-slider-underlay {
+        display: none; 
+    }
+
+    .clients-slider-container {
+        margin:  30px 0; 
+        width: 100%; 
+    }
+
+    .clients-slider-container .nav-dots {
+        margin-left: 15px;
+    }
+
+    .slide__content.slide-tab img {
+        margin: 0 auto; 
+    }
+
+    .slide__content_text {
+        text-align: center; 
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -204,5 +265,9 @@ margin: 0 auto;
     .clients-logo-group div {
         display: inline-block; 
         padding: 15px; 
+    }
+
+    .clients-logo img {
+        width: unset; 
     }
 }

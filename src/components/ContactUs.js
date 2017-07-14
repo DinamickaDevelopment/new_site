@@ -79,12 +79,13 @@ export default class ContactUs extends Component {
             }
         }
         let {PUBLIC_URL} = process.env 
+        let {h} = this.props 
         return (
             <div className="homepage__content_tab_block">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="map-container">
-                            <img src={PUBLIC_URL + "/images/map.png"} alt="map" />
+                        <div className="map-container" style={{height: h > 800 ? (h * 0.3) : (h * 0.2)}}>
+                            {/*<img src={PUBLIC_URL + "/images/map.png"} alt="map" />*/}
                         </div>
                     </div>
                 </div> 

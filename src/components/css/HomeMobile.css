@@ -3,14 +3,29 @@ a.menu-item:first-child {
 }
 
 a.menu-item {
-    padding: 10px 20px;
-    font-weight: 500;
+    padding: 10px 20px 10px 50px;
+    font-weight: 200;
     border-bottom: 1px solid #ccc; 
     transition: all .1s ease-in-out; 
     color: #000!important; 
+    font-size: 14px; 
 }
 
 a.menu-item:hover {
+    background: #9855d4; 
+    color: #fff!important; 
+} 
+
+a.menu-item-main {
+    padding: 10px 20px;
+    font-weight: 800;
+    border-bottom: 1px solid #ccc; 
+    transition: all .1s ease-in-out; 
+    color: #000!important;  
+    font-size: 16px;
+}
+
+a.menu-item-main:hover {
     background: #9855d4; 
     color: #fff!important; 
 } 
@@ -94,195 +109,24 @@ a.menu-item:hover {
     top: unset!important; 
     bottom: 30px!important;
     cursor: pointer;  
-}
+} 
 
-@media screen and (max-width: 1024px) {
-    .recent-works__filter {
-        float: none; 
-        font-size: 18px;
-        margin-right: 10%;
-        color: #2b2b2b;
-        margin-top: 75px;
-        margin-left: 10%;
-    } 
+/* _______________________ media queries ______________________ */
 
-    .team-slider-navigation {
-        display: none; 
-    }
+@media screen and (max-width: 1024px), screen and (max-height: 700px) {
 
-    .clients-slider-container .slick-arrow {
-        display: none!important; 
-    }
-
-    .clients-slider-underlay {
-        display: none; 
-    }
-
-    .clients-slider-container {
-        margin:  30px 0; 
-        width: 100%; 
-    }
-
-    .clients-slider-container .nav-dots {
-        margin-left: 15px;
-    }
-
-    .nav-dots {
-        bottom: -55px!important;
-    }
-
-    .slide__content.slide-tab img {
-        margin: 0 auto; 
-    }
-
-    .slide__content_text {
-        text-align: center; 
-    }
-
-    .icon-location + .form-info-location {
-        margin-left: 31px; 
-        margin-top: -31px;
-    }
-
-    .form-info-location {
-        margin-left: 31px; 
-        margin-bottom: 2px; 
-    }
-
-    .icon-location {
-        font-size: 22px; 
-    }
-
-    .locations {
-        margin-bottom: 20px; 
-    }
-
-    .contacts i {
-        margin-right: 15px;
-
-    }
-
-    .map-container img {
-        height: 200px; 
-        width: auto; 
-    } 
-
-    .action-btn {
-        background: #2b2b2b; 
-        width: 100%; 
-        float: none; 
-        margin-right: 0; 
-    }
-
-    .send-btn__container {
-        padding: 30px 15px; 
-    }
-
-    .more-posts__container {
-        padding: 30px 15px; 
-    }
 
     .mobile-homepage-section:last-child {
         margin-bottom: 0;
     }
 
-    .team-slider-container {
-        width: 100%; 
-        height: 600px; 
-        margin-left: 0;
-    }
-
-    .team-slider-container .slick-slide {
-        min-height: 440px; 
-    }
-
-    .clients-logos, .map-container {
-        overflow: hidden; 
-    } 
-
-    .map-container {
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-
-    .clients-slide__text {
-        font-size: 14px; 
-    } 
-
-    .clients-logos {
-        position: relative; 
-        margin-top: 50px; 
-        width: 108%;
-    }
-
-    .clients-logos-aligner {
-        margin-left: 0; 
-        width: 100%; 
-    }
-
 }
 
 @media screen and (max-width: 768px) {
-    .tab-wrap-center {
-        padding-left: 15px!important; 
-        padding-right: 15px!important; 
-    }
-
-    .tab-wrap-left {
-        padding-right: 15px!important; 
-    } 
-
-    .tab-wrap-right {
-        padding-left: 15px!important; 
-    }
-
-
-    .project-btn-tab div {
-        background: #2b2b2b; 
-        color: #fff; 
-        padding-top: 0;
-    }
-
-    .project-btn-tab i {
-        color: #fff;  
-    }
-
-    .what-we-do__tabs_tab {
-        padding: 0;
-        padding-bottom: 10px; 
-    }
-
-    .info-location {
-        font-size: 22px;
-    } 
-
-    .contact-us__content {
-        margin: 15px;
-    }
 
     .homepage__section-title {
         margin-left: 50px;
     }
  
-    .recent-works__filter {
-        margin-left: 50px; 
-        font-size: 15px; 
-    }
+
 } 
-/*
-@media screen and (max-width: 450px) {
-    .team-slider-container {
-        height: 550px; 
-    }
-
-    
-    .nav-dots {
-        bottom: -35px!important;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .team-slider-container {
-        height: 500px; 
-    }
-}*/

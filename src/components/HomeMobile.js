@@ -1,7 +1,6 @@
 import React, {Component} from 'react'  
 import { Scrollbars } from 'react-custom-scrollbars';
 import {
-    MobileNav, 
     OurServices, 
     OurProjects, 
     OurTeam, 
@@ -19,7 +18,6 @@ export default class HomeMobile extends Component {
         return (
             <div className="home-mobile" id="outer-container">
             <Scrollbars style={{height: h, width: w}}>
-                <MobileNav />
                 <div id="page-wrap">
                     <section className="mobile-homepage-section intro-section" id="home" style={{height: h}}> 
                         <div className="home-intro__container_mobile">
@@ -34,10 +32,10 @@ export default class HomeMobile extends Component {
                         </a>
                     </section>
                     <section className="mobile-homepage-section what-we-do-section" id="what-we-do">
-                        <OurServices h={window.innerWidth >= 768 ? h/3 : 240}/>
+                        <OurServices h={w >= 768 ? h/3 : 240}/>
                     </section>
                     <section className="mobile-homepage-section projects-section" id="our-projects">
-                        <OurProjects h={window.innerWidth >= 768 ? h/3 : 240} />
+                        <OurProjects h={w >= 768 ? h/3 : 240} />
                     </section> 
                     <section className="mobile-homepage-section team-section" id="team">
                         <OurTeam />
@@ -49,7 +47,7 @@ export default class HomeMobile extends Component {
                         <LatestPosts />
                     </section> 
                     <section className="mobile-homepage-section contact-us-section" id="contact-us">
-                        <ContactUs />
+                        <ContactUs h={h}/>
                     </section>
                 </div>
                 </Scrollbars>

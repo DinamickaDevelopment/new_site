@@ -7,9 +7,9 @@ import { createBrowserHistory } from 'history';
 import { persistStore } from 'redux-persist'; 
 import 'font-awesome/css/font-awesome.css'; 
 import configureStore from './store'; 
-import {Home} from './components'; 
+import {Container} from './components'; 
 import registerServiceWorker from './registerServiceWorker';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin'; 
 injectTapEventPlugin();
 
 const store = configureStore();  
@@ -23,7 +23,7 @@ persistStore(store, {blacklist: ['routing']}, () => {
 	<Provider store={store}>
 		<Router history={history}>
 			<div>
-				<Route path="/" component={Home} />
+				<Route path="/" component={Container} /> 
 			</div>
 		</Router>
 	</Provider>, 

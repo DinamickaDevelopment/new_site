@@ -1,0 +1,31 @@
+.projects-page__content {
+  min-height: 100%;
+  width: 100%;
+  z-index: 10; 
+  -webkit-flex-sizing: border-box; 
+          box-sizing: border-box;  
+  padding-left: 250px; 
+}
+
+.recent-works-gradient-yellow {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/yellow.png)
+} 
+
+/* _______________________________ media queries _____________________________ */
+
+@media screen and (max-width: 1024px), screen and (max-height: 700px) {
+    .projects-page__content {
+        padding-left: 0; 
+        padding-top: 100px; 
+    }
+
+    .projects-page__content .project-btn-tab {
+        margin-bottom: 10px; 
+    }
+
+    .projects-page__content .recent-works-violet>.top-offset {
+        bottom: 26.5%; 
+    }
+}

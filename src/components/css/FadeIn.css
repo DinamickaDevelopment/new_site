@@ -1,0 +1,9 @@
+.fade-transition {
+    -webkit-transition: opacity .5s linear;
+    -o-transition: opacity .5s linear;
+    transition: opacity .5s linear; 
+}
+
+.to-fade-in {   
+    opacity: 0; 
+}

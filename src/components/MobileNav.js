@@ -55,13 +55,17 @@ export default class MobileNav extends Component {
                     {/*<div className="burger-logo">
                         <img src={PUBLIC_URL + "/images/new_logo.png"} alt="logo" />
                     </div> */}
-                    <a href="#home" className="menu-item">HOME</a> 
-                    <a href="#what-we-do" className="menu-item">WHAT WE DO</a>
-                    <a href="#our-projects" className="menu-item">OUR PROJECTS</a>
-                    <a href="#team" className="menu-item">OUR TEAM</a> 
-                    <a href="#our-clients" className="menu-item">WHAT CLIENTS SAY</a> 
-                    <a href="#latest-posts" className="menu-item">LATEST POSTS</a> 
-                    <a href="#contact-us" className="menu-item">CONTACT US</a>
+                    <a href="/home" className="menu-item-main">HOME</a>
+                    <a href="/home#home" className="menu-item">HOME</a> 
+                    <a href="/home#what-we-do" className="menu-item">WHAT WE DO</a>
+                    <a href="/home#our-projects" className="menu-item">OUR PROJECTS</a>
+                    <a href="/home#team" className="menu-item">OUR TEAM</a> 
+                    <a href="/home#our-clients" className="menu-item">WHAT CLIENTS SAY</a> 
+                    <a href="/home#latest-posts" className="menu-item">LATEST POSTS</a> 
+                    <a href="/home#contact-us" className="menu-item">CONTACT US</a>
+                    <a href="/our-projects" className="menu-item-main">OUR PROJECTS</a>
+                    <a href="/how-we-do-things" className="menu-item-main">HOW WE DO THINGS</a>
+                    <a href="/blog" className="menu-item-main">BLOG</a>
                 </Menu>
             </div>
         )

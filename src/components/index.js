@@ -1,3 +1,4 @@
+import Container from './Container'
 import Home from './Home'; 
 import Sidebar from './Sidebar'
 import ServiceTab from './ServiceTab' 
@@ -11,6 +12,9 @@ import ContactUs from './ContactUs'
 import Intro from './Intro' 
 import HomeMobile from './HomeMobile' 
 import MobileNav from './MobileNav' 
+import Appgaged from './Appgaged' 
+import ProjectsPage from './ProjectsPage'  
+import FadeIn from './FadeIn'
 
 export {
 	Home, 
@@ -25,5 +29,9 @@ export {
 	ContactUs, 
 	Intro, 
 	HomeMobile, 
-	MobileNav
+	MobileNav, 
+	ProjectsPage,  
+	Appgaged, 
+	Container, 
+	FadeIn
 }

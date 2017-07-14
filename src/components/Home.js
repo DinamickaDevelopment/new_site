@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux';
-import * as actions from '../actions';  
-import debounce from 'debounce'; 
-
 
 import { 
 	Sidebar, 
@@ -26,23 +22,13 @@ class Home extends Component {
 		super();
 
 		this.state = {
-			isMobile: false, 
-			revealed: false,  
-			tab_h: 0, 
-			h: 0, 
-			w: 0, 
-			offset: 0
+			revealed: false 
 		}
 
-		this.resizeHandler = this.resizeHandler.bind(this);
 	}
 
 	componentDidMount() {
 
-		window.addEventListener('resize', debounce(this.resizeHandler, 100)); 
-		this.resizeHandler(); 
-
-		console.log(window.location.hash)
 		if (!window.location.hash) {
 			window.location.hash = "home"
 		} 
@@ -53,44 +39,7 @@ class Home extends Component {
 
 	}
 
-	componentWillUnmount() {
-		window.removeEventListener(this.resizeHandler);
-	}
 
-	resizeHandler() {	
-		if (window.innerWidth < 1025 && this.state.isMobile) {
-			this.setState({
-				h: window.innerHeight, 
-				w: window.innerWidth, 
-			})	
-		}
-		if (window.innerWidth < 1025 && !this.state.isMobile) {
-			this.setState({
-				isMobile: true, 
-				h: window.innerHeight, 
-				w: window.innerWidth, 
-			})
-		} else if (window.innerWidth >= 1025 && this.state.isMobile) {
-			this.setState({
-				isMobile: false, 
-				tab_h: window.innerHeight / 2.6, 
-				h: window.innerHeight, 
-				w: window.innerWidth, 
-				offset: (window.innerHeight * 5) - 125 
-			})
-
-		} 
-		else if (window.innerWidth >= 1025) {
-			this.setState({
-				tab_h: window.innerHeight / 2.6, 
-				h: window.innerHeight, 
-				w: window.innerWidth, 
-				offset: (window.innerHeight * 5) - 125 
-			})
-		} 
-
-
-	}
 	render() {
 
 		let options = {
@@ -112,12 +61,11 @@ class Home extends Component {
 		}; 
 
 		let {PUBLIC_URL} = process.env; 
-		let {tab_h, h, w, offset} = this.state;
+		let {tab_h, h, w, logos_offset} = this.props; 
 		return (<div className="scroll-wrapper">
 
-			{!this.state.isMobile ?
+			{!this.props.isMobile ?
 				<div className={"homepage-react " + (this.state.revealed ? '' : 'to-reveal')}>
-					<Sidebar />
 					<ScrollToTopOnMount />
 					<div className="homepage__content">
 						<SectionsContainer {...options}> 
@@ -125,9 +73,9 @@ class Home extends Component {
 							<Section><OurServices h={tab_h} /></Section>
 							<Section><OurProjects h={tab_h} /></Section>
 							<Section><OurTeam /></Section>
-							<Section><Testimonials h={h} offset={offset}/></Section>
+							<Section><Testimonials h={h} offset={logos_offset}/></Section>
 							<Section><LatestPosts /></Section>
-							<Section><ContactUs /></Section>
+							<Section><ContactUs h={h} /></Section>
 						</SectionsContainer>
 					</div>
 				</div> :
@@ -136,9 +84,4 @@ class Home extends Component {
 	}
 }
 
-const mapHome = (state) => ({
-	test: state.test
-})
-
-Home = connect(mapHome)(Home);
 export default Home
